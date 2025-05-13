@@ -1,51 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jayden's Sites</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fa;
-      color: #212529;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
     }
     header {
-      background-color: #ffffff;
-      padding: 20px;
+      background: linear-gradient(90deg, #007bff, #00c6ff);
+      padding: 40px 20px;
+      color: white;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
     nav a {
-      margin: 0 15px;
+      color: white;
       text-decoration: none;
-      color: #007bff;
+      margin: 0 15px;
+      font-weight: 600;
     }
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
     }
-    h1, h2 {
-      color: #343a40;
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #222;
     }
-    .service, .portfolio-item {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     footer {
-      background-color: #ffffff;
+      background-color: #222;
+      color: white;
       text-align: center;
+      padding: 30px;
+    }
+    .portfolio-item {
+      background-color: #fff;
+      border-radius: 15px;
       padding: 20px;
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #6c757d;
-      box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .contact-form {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .contact-form input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -61,57 +109,60 @@
   </header>
 
   <section id="services">
-    <h2>Services</h2>
-    <div class="service">
-      <h3>Basic Website</h3>
-      <p>Simple, clean websites for personal or small business use.</p>
-    </div>
-    <div class="service">
-      <h3>Tradie Business Sites</h3>
-      <p>Mobile-friendly websites designed specifically for tradies and construction businesses.</p>
-    </div>
-    <div class="service">
-      <h3>Clothing Brand Websites</h3>
-      <p>Stylish sites for clothing brands to showcase and sell their products.</p>
+    <h2 class="section-title">Services</h2>
+    <div class="service-grid">
+      <div class="card">
+        <h3>Basic Websites</h3>
+        <p>Clean and professional one-page websites for individuals and businesses.</p>
+      </div>
+      <div class="card">
+        <h3>Tradie Business Sites</h3>
+        <p>Mobile-friendly websites designed specifically for trades and construction professionals.</p>
+      </div>
+      <div class="card">
+        <h3>Clothing Brand Websites</h3>
+        <p>Sleek online storefronts for fashion and streetwear brands.</p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Sites</h3>
+        <p>Showcase your work and skills in a beautiful, scroll-friendly layout.</p>
+      </div>
+      <div class="card">
+        <h3>Landing Pages</h3>
+        <p>High-converting pages for events, sales, or product announcements.</p>
+      </div>
     </div>
   </section>
 
   <section id="portfolio">
-    <h2>Portfolio</h2>
+    <h2 class="section-title">Portfolio</h2>
     <div class="portfolio-item">
-      <h3>Tradie Demo Site</h3>
-      <p>Coming soon – a clean and professional site for a mock plumbing business.</p>
+      <h3>Tradie Site Demo</h3>
+      <p>Clean layout, easy contact access, and strong CTA for a plumbing business (demo).</p>
     </div>
     <div class="portfolio-item">
-      <h3>Clothing Brand Demo</h3>
-      <p>Coming soon – a demo online shop for a streetwear brand.</p>
+      <h3>Streetwear Shop</h3>
+      <p>Modern product showcase for a fictional clothing brand (demo).</p>
     </div>
   </section>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>I'm Jayden, a high school student in Year 11 in Australia. I work in trades and landscaping, and I design websites for tradies, small businesses, and clothing brands. Whether you need a simple online presence or a full website, I can help.</p>
+    <h2 class="section-title">About Me</h2>
+    <p style="max-width: 700px; margin: 0 auto; text-align: center;">Hey, I'm Jayden — a Year 11 student from Australia with hands-on experience in engineering, construction, and digital design. On weekends, I work in landscaping and carpentry, and I help clients like tradies, clothing brands, and small business owners build professional websites that get noticed.</p>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Interested in working together? Get in touch using the form below or email me.</p>
-    <form action="#" method="post">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" /><br /><br />
-
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" /><br /><br />
-
-      <label for="message">Message:</label><br />
-      <textarea id="message" name="message"></textarea><br /><br />
-
-      <input type="submit" value="Send Message" />
+    <h2 class="section-title">Contact Me</h2>
+    <form class="contact-form" action="#" method="post">
+      <input type="text" placeholder="Your Name" name="name" required>
+      <input type="email" placeholder="Your Email" name="email" required>
+      <textarea placeholder="Your Message" rows="5" name="message" required></textarea>
+      <input type="submit" value="Send Message">
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Jayden's Sites. All rights reserved.</p>
+    <p>&copy; 2025 Jayden's Sites. Built by Jayden.</p>
   </footer>
 </body>
 </html>
